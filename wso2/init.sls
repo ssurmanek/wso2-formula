@@ -11,6 +11,8 @@ java-alternatives:
     - link: /usr/bin/java
     - path: /opt/jdk/jdk1.8.0_144/bin/java
     - priority: 100
+    - require: 
+      - archive: jdk
     
 javac-alternatives:
   alternatives.install:
@@ -18,6 +20,8 @@ javac-alternatives:
     - link: /usr/bin/javac
     - path: /opt/jdk/jdk1.8.0_144/bin/javac
     - priority: 100
+    - require: 
+      - archive: jdk
 
 java_home_env_variable:
   environ.setenv:
@@ -25,7 +29,7 @@ java_home_env_variable:
      - value: /opt/jdk/jdk1.8.0_144
      - update_minion: True
 
-wso2is-archive:
+wso2is:
   archive.extracted:
     - name: /opt/ 
     - source: salt://wso2ia/files/wso2is-5.4.0.zip
@@ -37,3 +41,6 @@ wso2is-start:
     - name: "wso2server.sh --start"
     - cwd: "opt/wso2is-5.4.0/bin/"
     - shell: /bin/bash
+    - require: 
+      - archive: jdk
+      - archive: wso2is
