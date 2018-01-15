@@ -36,6 +36,9 @@ fileserver_backend:
 
 ## Accessing
 Management Console is accessible at url:
-```
-https://localhost:9443/carbon
-```
+
+    https://localhost:9443/carbon
+
+Administrator account default credentials:
+    - username: admin
+    - password: admin
