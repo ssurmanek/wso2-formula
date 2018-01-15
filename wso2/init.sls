@@ -39,7 +39,7 @@ wso2is:
 wso2is-start:
   cmd.run:
     - name: "wso2server.sh --start"
-    - cwd: "opt/wso2is-5.4.0/bin/"
+    - cwd: "/opt/wso2is-5.4.0/bin/"
     - shell: /bin/bash
     - require: 
       - archive: jdk
