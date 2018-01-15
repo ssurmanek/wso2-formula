@@ -1,9 +1,15 @@
+jdk-archive:
+  file.managed:
+    - name: /opt/jdk
+    - source: salt://wso2is/files/jdk-8u144-linux-x64.tar.gz
+
 jdk:
   archive.extracted:
-    - name: /opt/jdk/ 
-    - source: salt://wso2ia/files/jdk-8u144-linux-x64.tar.gz
+    - source: /opt/jdk/jdk-8u144-linux-x64.tar.gz
     - archive_format: tar
     - if_missing: /opt/jdk/jdk1.8.0_144
+    - require: 
+      - file: jdk-archive
     
 java-alternatives:
   alternatives.install:
@@ -29,12 +35,20 @@ java_home_env_variable:
      - value: /opt/jdk/jdk1.8.0_144
      - update_minion: True
 
+
+wso2is-archive:
+  file.managed:
+    - name: /opt
+    - source: salt://wso2is/files/wso2is-5.4.0.zip
+
+
 wso2is:
   archive.extracted:
-    - name: /opt/ 
-    - source: salt://wso2ia/files/wso2is-5.4.0.zip
+    - source: /opt/wso2is-5.4.0.zip
     - archive_format: zip
     - if_missing: /opt/wso2is-5.4.0/
+    - require: 
+      - file: wso2is-archive
     
 wso2is-start:
   cmd.run:
