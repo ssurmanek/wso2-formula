@@ -3,10 +3,10 @@
 ## Prerequisites 
 
 ###### Download
-- wso2is .zip file from official product pages and save it to source files directory.
+- wso2is .zip file from official product pages and save it to source files directory:
 [WSO2 - identity server, version 5.4.0](https://wso2.com/identity-and-access-management#download)
 
-- JDK .tar file from official product pages and save it to source files directory.
+- JDK .tar file from official product pages and save it to source files directory:
 [Java SE Development Kit 8u144](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html?printOnly=1)
 
 ###### Salt-Master Configuration:
