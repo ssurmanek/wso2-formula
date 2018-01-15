@@ -4,7 +4,8 @@ A wso2 formula for install and configure WSO2 - Identity Server.
 
 Note:
 
-See the full [Salt Formulas installation and usage instructions (http://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html).
+See the full [Salt Formulas installation and usage instructions
+(http://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html)
 
 
 ## Prerequisites 
