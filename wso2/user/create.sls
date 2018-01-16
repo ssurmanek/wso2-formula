@@ -3,6 +3,7 @@ create_user:
         - familyName: George
         - givenName: App
         - password: secret
+        - userName: georgeapp
         - emails:
             - george@example.com:
                 - primary: true
