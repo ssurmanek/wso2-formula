@@ -7,7 +7,7 @@ create_user:
         - emails:
             - george@example.com:
                 - primary: true
-                - type: 'work'
+                - type: work
             - george@mail.com:
                 - primary: false
-                - type: 'home'
+                - type: home
