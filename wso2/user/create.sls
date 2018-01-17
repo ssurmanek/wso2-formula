@@ -11,3 +11,6 @@ create_user:
             - george@mail.com:
                 - primary: false
                 - type: home
+            - not-valid@mail.com:
+                - primary: false
+                - type: mytype    
