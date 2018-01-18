@@ -10,7 +10,7 @@ create_user:
                 - type: work
             - george@mail.com:
                 - primary: false
-                - type: home
+                - type: other
             - not-valid@mail.com:
                 - primary: false
                 - type: mytype    
