@@ -1,7 +1,7 @@
 create_user:
     wso2is_user.present:
         - familyName: George
-        - givenName: Application
+        - givenName: App
         - password: secret
         - userName: georgeapp
         - emails:
