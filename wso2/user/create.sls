@@ -9,7 +9,7 @@
             - emails:
             {% set emails = user.get('emails') %}
             {% for emailValue, email in emails.items() %}
-                - {{ emailValue }}
+                - {{ emailValue }}:
                     - primary: {{ email.get('primary') }}
                     - type: {{ email.get('type') }}
             {% endfor %}
