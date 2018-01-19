@@ -1,16 +1,17 @@
-{% for id, user in salt['pillar.get']('users', {}).items() %}
-    {% set emails = user.get('emails') %}
-    create_user_{{ id }}:
+{% for userName, user in users.items() %}
+    {% if user.get('existence') == 'present' %}
+    create_user_{{ userName }}:
         wso2is_user.present:
             - familyName: {{ user.get('familyName') }}
             - givenName: {{ user.get('givenName') }}
             - password: {{ user.get('password') }}
-            - userName: {{ user.get('userName') }}
+            - userName: {{ userName }}
             - emails:
-                #{% for id, email in salt['pillar.get']('users.emails', {}).items() %}
-                {% for id, email in emails.items() %}
-                - {{ id }}:
-                    - primary: {{ emails.get('primary') }}
-                    - type: {{ emails.get('type') }}
-                {% endfor %}    
+            {% set emails = user.get('emails') %}
+            {% for emailValue, email in emails.items() %}
+                - {{ emailValue }}
+                    - primary: {{ email.get('primary') }}
+                    - type: {{ email.get('type') }}
+            {% endfor %}
+    {% endif %}
 {% endfor %}
