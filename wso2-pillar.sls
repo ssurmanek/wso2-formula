@@ -1,4 +1,4 @@
-users:
+wso2-users:
     johndoe:
         existence: present
         id: da22c6a0-fd00-11e7-9db1-fa163ec08874
