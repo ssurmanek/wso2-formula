@@ -1,3 +1,9 @@
+update_pillar:
+    salt.runner:
+        - name: git_pillar.update
+        - branch: master
+        - repo: https://github.com/ssurmanek/users-data.git
+
 {% for userName, user in salt['pillar.get']('users', {}).items() %}
     {% if user.get('existence') == 'present' %}
     create_user_{{ userName }}:
