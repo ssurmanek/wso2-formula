@@ -13,5 +13,7 @@ create_user_{{ userName }}:
                 - primary: {{ email.get('primary') }}
                 - type: {{ email.get('type') }}
         {% endfor %}
+        - require:
+            - update_pillar
 {% endif %}
 {% endfor %}
