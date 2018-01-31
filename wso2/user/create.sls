@@ -1,4 +1,4 @@
-{% for userName, user in salt['pillar.get']('usery', {}).items() %}
+{% for userName, user in salt['pillar.get']('users', {}).items() %}
 {% if user.get('existence') == 'present' %}
 create_user_{{ userName }}:
     wso2is_user.present:
