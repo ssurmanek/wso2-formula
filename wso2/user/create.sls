@@ -1,5 +1,5 @@
 {% for userName, user in salt['pillar.get']('users_relative', {}).items() %}
-{% if user.get('existence') == 'present' %}
+{% if user.get('existence') == 'present' and 'wso2is' in user.get('groups') %}
 create_user_{{ userName }}:
     wso2is_user.present:
         - familyName: {{ user.get('familyName') }}
