@@ -1,2 +1,2 @@
 testing:
-     wso2is_user.test:
+     wso2is_user.test
