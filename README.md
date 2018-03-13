@@ -47,6 +47,9 @@ Administrator account default credentials:
 ## Info
 MidPoint is open identity & organization management and governance platform which uses Identity Connector Framework (ConnId) and leverages Spring framework. It is a Java application deployed as a stand-alone server process. This image is based on official OpenJDK version 8 image which runs on Alpine Linux and deploys latest MidPoint version 3.7.1.
 
+## Tags:
+latest: MidPoint v3.7.1
+
 ## Launch Container:
 Download:
 ```
@@ -69,11 +72,10 @@ Shell:
 ```
 docker exec -it midpoint /bin/sh
 ```
-midPoint home:
-/opt/midpoint/var/
 
 container logs:
 ```
 docker logs midpoint
 ```
+midPoint home: /opt/midpoint/var/
 log files: /opt/midpoint/var/log
