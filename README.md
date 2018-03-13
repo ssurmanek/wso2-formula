@@ -54,15 +54,26 @@ docker pull evolveum/midpoint
 ```
 Run on port 8080:
 ```
-docker run -p 8080:8080 evolveum/midpoint
+docker run -p 8080:8080 --name midpoint evolveum/midpoint
 ```
 
 ## Access MidPoint:
 URL: http://127.0.0.1:8080/midpoint
-Admin username: Administrator
-Admin password: 5ecr3t
 
-## Access shell:
+Username: Administrator
+
+Password: 5ecr3t
+
+## Admin access:
+Shell:
 ```
 docker exec -it midpoint /bin/sh
 ```
+midPoint home:
+/opt/midpoint/var/
+
+container logs:
+```
+docker logs midpoint
+```
+log files: /opt/midpoint/var/log
