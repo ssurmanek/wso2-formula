@@ -42,3 +42,27 @@ Management Console is accessible at url:
 Administrator account default credentials:
 - username: admin
 - password: admin
+
+# midPoint: the Identity Governance and Administration tool
+## Info
+MidPoint is open identity & organization management and governance platform which uses Identity Connector Framework (ConnId) and leverages Spring framework. It is a Java application deployed as a stand-alone server process. This image is based on official OpenJDK version 8 image which runs on Alpine Linux and deploys latest MidPoint version 3.7.1.
+
+## Launch Container:
+Download:
+```
+docker pull evolveum/midpoint
+```
+Run on port 8080:
+```
+docker run -p 8080:8080 evolveum/midpoint
+```
+
+## Access MidPoint:
+URL: http://127.0.0.1:8080/midpoint
+Admin username: Administrator
+Admin password: 5ecr3t
+
+## Access shell:
+```
+docker exec -it midpoint /bin/sh
+```
