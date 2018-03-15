@@ -42,3 +42,19 @@ Management Console is accessible at url:
 Administrator account default credentials:
 - username: admin
 - password: admin
+
+## Admin access:
+- shell:
+```
+docker exec -it midpoint /bin/sh
+```
+- container logs:
+```
+docker logs midpoint
+```
+- midPoint home: /opt/midpoint/var/
+- log files: /opt/midpoint/var/log
+
+## Tags:
+- latest: MidPoint v3.7.1
+- 3.7.1: MidPoint v3.7.1
