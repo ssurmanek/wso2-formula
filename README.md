@@ -56,5 +56,5 @@ docker logs midpoint
 - log files: /opt/midpoint/var/log
 
 ## Tags:
-- latest: MidPoint v3.7.1
-- 3.7.1: MidPoint v3.7.1
+- [latest](https://github.com/Evolveum/midpoint-docker): MidPoint v3.7.1
+- [3.7.1](https://github.com/Evolveum/midpoint-docker): MidPoint v3.7.1
